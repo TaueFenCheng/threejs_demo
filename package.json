@@ -1,0 +1,29 @@
+{
+	"devDependencies": {
+		"vite": "^4.3.9"
+	},
+	"packageManager": "pnpm@9.15.6",
+	"name": "threejs_demo",
+	"author": {
+		"name": "tangtaue"
+	},
+	"maintainers": [
+		"tangtaue"
+	],
+	"scripts": {
+		"dev": "npx vite"
+	},
+	"version": "1.0.0",
+	"engines": {
+		"node": ">=16"
+	},
+	"bugs": {
+	},
+	"publishConfig": {
+		"access": "public",
+		"registry": "https://registry.npmjs.org/"
+	},
+	"dependencies": {
+		"three": "^0.174.0"
+	}
+}

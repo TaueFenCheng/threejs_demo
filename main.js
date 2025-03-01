@@ -26,9 +26,15 @@ scene.add( spotLightHelper );
  */
 
 
-console.log(new THREE.TextureLoader)
+// console.log(new THREE.TextureLoader)
 
+// load a texture, set wrap mode to repeat
+const texture = new THREE.TextureLoader().load( "textures/water.jpg" );
+texture.wrapS = THREE.RepeatWrapping;
+texture.wrapT = THREE.RepeatWrapping;
+texture.repeat.set( 4, 4 );
 // scene.add(text)
+scene.add(texture)
 
 
 /**

@@ -34,7 +34,7 @@ texture.wrapS = THREE.RepeatWrapping;
 texture.wrapT = THREE.RepeatWrapping;
 texture.repeat.set( 4, 4 );
 // scene.add(text)
-scene.add(texture)
+// scene.add(texture)
 
 
 /**
@@ -53,6 +53,25 @@ loader.load( 'path/to/model.glb', function ( gltf ) {
 
 } );
 
+/**
+ * 画线
+ */
+
+
+//create a blue LineBasicMaterial
+const materialLine = new THREE.LineBasicMaterial( { color: 0x0000ff } );
+
+
+// 顶点的几何体
+const points = [];
+points.push( new THREE.Vector3( - 10, 0, 0 ) );
+points.push( new THREE.Vector3( 0, 10, 0 ) );
+points.push( new THREE.Vector3( 10, 0, 0 ) );
+
+const geometryLine = new THREE.BufferGeometry().setFromPoints( points );
+const line = new THREE.Line(geometryLine,materialLine)
+
+scene.add(line)
 
 /**
  * 物体
